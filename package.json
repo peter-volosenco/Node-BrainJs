@@ -5,7 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "brain.js": "^2.0.0-alpha.11",
+    "brain.js": "^2.0.0-beta.5",
     "express": "^4.17.1"
   }
 }
