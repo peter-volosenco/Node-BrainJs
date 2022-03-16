@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>VITOZ | AI Network Creator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" type="text/css"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h1>Intended to create network.</h1>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+        <div class="cell auto">
+            <h2>1. CREATE NETWORK</h2>
+            <b>URL: <a href="https://node.vitoz.co.uk/file">https://node.vitoz.co.uk/file?pwd=Password</a></b>
+            <pre lang="javascript"><code lang="javascript">
+                    //(!) myData:
+                    {
+                        "request": {
+                            "method": "POST",
+                            "trainingData" :[
+                                { "input": [0, 0], "output": [0] },
+                                { "input": [0, 1], "output": [1] },
+                                { "input": [1, 0], "output": [1] },
+                                { "input": [1, 1], "output": [0] }
+                            ],
+                            "networkType":"NeuralNetwork",
+                            "netConfig":null,
+                            "trainingConfig":null
+                        }
+                    }
+            </code></pre>
+        </div>
+        <div class="cell auto">
+            <h3>AJAX Example</h3>
+            <br />
+            <pre lang="javascript"><code lang="javascript">//(!) myData should be like the collections above
+                var myData = {};
+
+                var settings = {
+                "url": "https://node1.vitoz.co.uk/network?pwd=peter123",
+                "method": "GET",
+                "data": JSON.stringify(myData),
+                };
+
+                $.ajax(settings).done(function (response) {
+                console.log(response);
+                });
+            </code></pre>
+        </div>
+    </div>
+
+</body>
+</html>
